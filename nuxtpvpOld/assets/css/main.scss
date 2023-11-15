@@ -1,0 +1,63 @@
+$colors: (
+        'primary': ('base': #ff8900,
+        ),
+        'success': ('base': #13ce66,
+        ),
+        'warning': ('base': #ffba00,
+        ),
+        'danger': ('base': #ff4949,
+        ),
+        'error': ('base': #db2828,
+        ),
+        'info': ('base': #42b8dd,
+        ),
+);
+
+@forward "element-plus/theme-chalk/src/common/var.scss" with ($colors: $colors);
+
+@use "element-plus/theme-chalk/src/index.scss" as *;
+
+.center {
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.text-center {
+        text-align: center;
+}
+
+.flex-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.floating-center {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+}
+
+body {
+        margin: 0;
+}
+
+.dummy {
+        border-radius: 10px;
+        width: 120px;
+        height: 20px;
+}
+
+.skeleton-animation {
+        animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+        0% {
+                background-color: hsl(200, 20%, 80%);
+        }
+
+        100% {
+                background-color: hsl(200, 20%, 95%);
+        }
+}
